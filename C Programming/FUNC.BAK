@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<conio.h>
+void func();
+void main(){
+ clrscr();
+ printf("hello");
+ func();    //calling function//
+ getch();
+ }
+  void func()         //function definition//
+  {
+  printf("javatpoint");
+  }
+

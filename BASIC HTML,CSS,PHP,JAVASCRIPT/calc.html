@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Calculator</title>
+</head>
+<body>
+<script type="text/javascript">
+function add(){
+var a=Number(document.calc.numa.value);
+var b=Number(document.calc.numb.value);
+ var c=a+b;
+alert("sum");
+document.write(c);
+}
+function sub(){
+var a ,b,c;
+a=Number(document.calc.numa.value);
+b=Number(document.calc.numb.value);
+c=a-b;
+alert("subtract");
+document.write(c);
+}
+function mult(){
+var a ,b,c;
+a=Number(document.calc.numa.value);
+b=Number(document.calc.numb.value);
+c=a*b;
+document.write(c);
+}
+function div(){
+var a ,b,c;
+a=Number(document.calc.numa.value);
+b=Number(document.calc.numb.value);
+c=a/b;
+document.write(c);
+}
+function per(){
+var a,b,c;
+a=Number(document.calc.numa.value);
+b=Number(document.calc.numb.value);
+c=a/b*100;
+document.write(d);
+}
+</script>
+<form  name ="calc">
+<input type="text" name="numa" placeholder="Enter the first number"/>
+<input type="text" name="numb" placeholder="Enter the second number"/>
+<input type="button" value="Sum" onClick="add()"/>
+<input type="button" value="Sub" onClick="sub()"/>
+<input type="button" value="multiply" onClick="mult()"/>
+<input type="button" value="divide" onClick="div()"/>
+<input type="button" value="Percentage" onClick="per()"/>
+<input type="reset" value="RESET"/>
+
+</form>
+</body>
+</html>

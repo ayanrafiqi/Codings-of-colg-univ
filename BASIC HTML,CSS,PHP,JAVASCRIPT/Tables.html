@@ -1,0 +1,110 @@
+<!-- HTML tables are used to arrange data in a tabular form in rows and columns -->
+<html>
+<head>
+<style type="text/css">
+/*table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table {
+  width:50%;
+}*/
+
+
+
+thead,
+tfoot {
+    background-color: #3f87a6;
+    color: #fff;
+}
+
+tbody {
+    background-color: #e4f0f5;
+}
+
+caption {
+    padding: 10px;
+    caption-side: bottom;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: .8rem;
+}
+
+
+</style>
+<body>
+<!-- A simple table -->
+<table> <!-- deprecated --> 
+<tr><th colspan="2">Department of Computer Sciences</th></tr>
+<tr><th>Programme</th><th>Semester</th></tr>
+<tr><td rowspan="3">MCA</td><td>1ST</td></tr>
+<tr><td>3RD</td></tr>
+<tr><td>5TH</td></tr>
+<tr><td rowspan="2">MIT</td><td>1ST</td></tr>
+<tr><td>3RD</td></tr>
+</table>
+<br/><br/>
+
+<!-- Row span and column span -->
+<table border="1px"> <!-- deprecated --> 
+<tr><th>Active</th><th>Semesters</th><th>TH</th></tr>
+<tr><th>Programme</th><th>Semester</th><td>TD</td></tr>
+<tr><td colspan="2" rowspan="2">MCA</td><td>TD</td></tr>
+<tr><td>TD</td></tr>
+<tr><td>MCA</td><td>5TH</td><td>TD</td></tr>
+<tr><td>MIT</td><td>1ST</td><td>TD</td></tr>
+<tr><td>MIT</td><td>3RD</td><td>TD</td></tr>
+</table>
+<br/><br/>
+
+<!-- Adding a caption | cellspacing | cellpadding -->
+<table border=1 style="width:50%" cellpadding="10px" cellspacing="10px">
+  <caption>Table 3: Itemized Bill</caption>
+  <tr>
+    <th>Item</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <th>CPU</th>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td style="text-align: center">RAM</td>
+    <td>$50</td>
+  </tr>
+</table>
+<br/><br/>
+
+<table>
+    <thead>
+        <tr>
+            <th>Items</th>
+            <th scope="col">Expenditure</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Donuts</th>
+            <td>3,000</td>
+        </tr>
+        <tr>
+            <th scope="row">Stationery</th>
+            <td>18,000</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th scope="row">Totals</th>
+            <td>21,000</td>
+        </tr>
+    </tfoot>
+</table>
+
+
+</body>
+</html>

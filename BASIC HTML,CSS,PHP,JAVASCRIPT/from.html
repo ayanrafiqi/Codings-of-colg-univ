@@ -1,0 +1,36 @@
+<html> 
+<head>
+<title> welcome java script </title>
+</head>
+<body>
+<script type="text/javascript">
+/*var a;
+for(a in navigator){
+  document.write(a + "</br>");
+  } */
+  
+        var cars = [
+            "Hyundai",
+			"mahindra",
+			"fait",
+			];
+			document.write(cars[0] + " " + cars[2]);
+			document.write("</br>" + typeof cars);
+			var book = {
+			 author:"jk",
+			 pages:320,
+			 title:"javascript</br>",
+			 desc:function(){
+			 return this.author + " " + this.pages + " " + this.title;
+			 }
+			 };
+			  //document.write("</br>" + book.author);
+		    // document.write("</br>" + book.pages);
+		    // document.write("</br>" + book.title);
+	         document.write("</br>" + book.desc());
+			 var add=new Function("num1","num2","return num1+num2");  
+             document.writeln(add(10,5)); 
+		
+ </script>
+ </body>
+ </html>

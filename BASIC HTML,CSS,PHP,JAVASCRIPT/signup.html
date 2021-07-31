@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>Registration page</title>
+</head>
+<body>
+<script type="text/javascript">
+     function val(){
+	     var fname=(document.info.firstname.value);
+		 var lname=(document.info.lastname.value);
+		 var address=(document.info.address.value);
+		 var ph=(document.info.tel.value);
+		 var genM=(document.info.genderm.value);
+		 var genF=(document.info.genderf.value);
+		 var pass=(document.info.password.value);
+		 var repass=(document.info.retypepassword.value);
+		 
+                    if (fname==null || fname=="") 
+                    {  
+                         alert("Name cannot be left blank");  
+                         return false; 
+						  }
+                    else  if (lname==null || lname=="") 
+                    {  
+                         alert(" last Name cannot be left blank");  
+                         return false;
+						 }
+				    else if(genM.checked==false && genF.checked==false)
+                    {  
+                         alert("You must select male or female");  
+                         return false;
+                    } 
+			        else  if (address==null || address=="") 
+                    {  
+                         alert("Address details cannot be left blank");  
+                         return false;
+						 }
+				    else if(ph.length!=10) 
+                    {  
+                         alert("Phone Number  must be 10 digit.");  
+                         return false;
+                    }  
+					 else if(document.info.email.value == "" ){
+					     alert("please Enter Email address");
+						 return false;
+					 }
+					
+                    else if(pass.length<6) 
+                    {  
+                         alert("Password must be at least 6 characters long.");  
+                         return false;
+						 }
+				    
+					else if(repass!=pass)
+					{
+					    alert("Retype password do not match password");
+						return false;
+						}
+						
+				    }
+						
+				function emailvalidation() 
+               { 
+                    var a=document.info.email.value; 
+                    if (a.indexOf("@")== -1) 
+                    { 
+                         alert("Please enter valid email address")
+						 document.info.email.focus()
+						 }
+                   else  if (a.indexOf(".")== -1) 
+                    { 
+                         alert("Please enter valid email address")
+						 document.info.email.focus()
+						 }
+					/*else if (a.length("@")> 1){
+						 alert("Please enter valid email address")
+						 document.info.email.focus()
+                         } 
+					else if (a.length(".") > 1){
+						 alert("Please enter valid email address")
+						 document.info.email.focus()
+			            } */
+	                 /* var a=document.info.email.value;
+					var at =x.indexOf("@");  
+                    var dot=x.lastIndexOf("."); 
+                      					 
+			   */
+				}	
+        						 
+</script>
+<form name="info"  method="post" action="aftervalid.html" onsubmit= "return val()">
+<fieldset><big><b>Register Here</big></b><br/>
+<label for "firstname">First name</label>
+<input type="text" name="firstname" Id="fname"></br>
+<label for "lastname">Last name</label>
+<input type="text" name="lastname"><br/>
+<label for "gender">Gender:</label>
+<input type="radio" name="genderm"/>Male
+<input type="radio" name="genderf"/>Female<br/>
+  <p>SELECT YOUR COURSE   
+        <select type="text" value="" name="Subject"> 
+		    <option>select</option>
+            <option>BBA</option> 
+            <option>BCA</option> 
+            <option>MBA</option> 
+            <option>MCA</option> 
+        </select></p>
+<label for "address">Address</label>
+<input type="text" name="address"/></br>
+Phone number <input type="text" name="tel"/></br>
+<label for "email">Email</label>
+<input type="text" name="email" onblur="emailvalidation()"/><br/>
+<label for "password">Password</label>
+<input type="password" name="password"/></br>
+<label for "retypepassword"> Retype Password</label>
+<input type="password" name="retypepassword" placeholder="retypepassword must match password"/></br>
+<input type="submit" name="submit" value="Register"/>
+<input type="reset"/>
+</form>
+</fieldset>
+</body>
+</html>

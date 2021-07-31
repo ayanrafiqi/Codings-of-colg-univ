@@ -1,0 +1,54 @@
+<html>
+ <body onload = "onloadfunction()"><head><title> Hello Events</title></head>
+
+<p id="123"> Hello this is my paragraph with 123 id</p>
+
+	<script type = "text/javascript">
+		function timefunc(){
+			document.write("<br>" + Date());
+			document.write("<br>" + new Date().getHours());
+		}
+
+		function mathfunc(){
+			document.write("<br>" + Math.PI);
+			document.write("<br>" + Math.sqrt(4));
+			document.write("<br>" + Math.round(4.8));
+			document.write("<br>" + Math.random());
+			document.write("<br>" + Math.pow(2,4));
+			document.write("<br>" + Math.abs(-55));
+			document.write("<br>" + 5/0);
+		}
+
+		function onloadfunction(){
+			var x = document.getElementById("123");
+			//document.write(x + "OKKK");
+			x.style.color = "red";
+		}
+		function colorfunc(){
+			document.getElementById("123").style.color = "blue";
+			document.getElementById("123").innerHTML = "Changed text";
+		}
+
+		function funcgeneral(p){
+			document.write(p);
+		}
+
+	</script>
+	<input type = "button" name = "Something" value = "event" onClick = "alert('Good')"/>
+	<input type = "button" name = "Someth" value = "Time" onClick = "timefunc()"/>
+	<input type = "button" name = "Some" value = "Math" onClick = "mathfunc()"/>
+	<input type = "button" name = "Som" value = "Color" onClick = "colorfunc()"/>
+	
+	<button name = "So" value = "Color123" onClick = "this.innerHTML = Date()">button is this</button>
+	<input type = "button" name = "S" value = "onmouseover" onMouseOver = "funcgeneral('mouse over')"/>
+	<input type = "button" name = "S1" value = "onmouseout" onMouseOut = "funcgeneral('mouse out')"/>
+	<input type = "text" name = "S2" value = "onchange" onchange = "funcgeneral('on change')"/>
+	<input type = "text" name = "S3" value = "key down" onKeyDown = "funcgeneral('on key down')"/>
+
+ </body>
+</html>
+
+
+
+
+

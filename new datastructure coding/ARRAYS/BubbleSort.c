@@ -1,18 +1,19 @@
 #include<stdio.h>
 #include<assert.h>
+#include<stdbool.h>
 
 
- bool array_equals(int [], int [],int);
- void  display(int [],int );
-void bubbleSort(int[],int );
+  bool arrayEqual(int [], int [],int);
+  void  display(int [],int );
+  void bubbleSort(int[],int );
 
 int main()
 {
- int a[5],i,n,t,j;
+ int i,n,t,j;
 
 
 
-   a[] = {2, 1, 10, 0, 5};
+   int a[] = {2, 1, 10, 0, 5};
   int sorted [] = {0, 1, 2, 5, 10};
 
 
@@ -22,11 +23,12 @@ scanf("%d",&n);
         bubbleSort(a,n);
         assert(arrayEqual(a, sorted, n));
         display(a,n);
-        getch();
+        return 0;
 
 }
 
 void bubbleSort(int a[],int n){
+  int t;
   for (int i=0;i<n;i++){
         for (int j=0;j<n;j++)
           {
@@ -42,16 +44,16 @@ void bubbleSort(int a[],int n){
 
 void  display(int a[],int n){
        printf("the sorted elements\n");
-       for(i=1;i<=n;i++){
+       for( int i=0;i<n;i++){
 	  printf("%d\t",a[i]);
 	}
       }
-bool arrayEqual(int a[], int s[],n){
+bool arrayEqual(int a[], int s[],int n){
     int equal = true;
-    for(int i = 0; i < size; i++){
+    for(int i = 0; i < n; i++){
      if(a[i] != s[i]){
       equal = false;
-      break;
+      break; 
     }
    }
   return equal;

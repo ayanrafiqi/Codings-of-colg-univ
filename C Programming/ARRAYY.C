@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<conio.h>
-void main()
+int main()
 {
    int a[5],i,n,sum=0,avrg;
-   clrscr();
+   //clrscr();
 //   printf("%d\n ",sizeof(a));
    printf("enter the size of an array\n");
    scanf("%d",&n);
@@ -27,5 +27,5 @@ void main()
   avrg=sum/n;
   printf("the average of array is : %d\t",avrg);
 
-  getch();
+  return 0;
   }

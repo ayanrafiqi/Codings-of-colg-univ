@@ -1,27 +1,7 @@
 #include<stdio.h>
-#include<assert.h>
 #include<stdbool.h>
-  void selectionSort(int[],int);
-   bool arrayEqual(int [], int [],int);
-   void  display(int [],int );
+#include "sorting.h"
 
-int main()
-{
-  int i,n,j;
- int a[5]= {2, 1, 10, 0, 5};
-  int sorted [5] = {0, 1, 2, 5, 10};
-
-printf("enter the array size\n");
-scanf("%d",&n);
-
-
-        selectionSort(a,n); 
-        assert(arrayEqual(a, sorted, n));
-        display(a,n);
-
-	return 0;
-
-}
 
 void selectionSort(int a[],int n){
     for(int i=0;i<n;i++)

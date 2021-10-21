@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "stdio.h": "c",
+    "singlylinkedlist.h": "c",
+    "binaryheader.h": "c"
+  }
+}

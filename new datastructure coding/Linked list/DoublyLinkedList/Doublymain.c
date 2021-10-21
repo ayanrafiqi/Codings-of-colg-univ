@@ -1,67 +1,7 @@
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-
-typedef struct node {
-    struct node *prev;
-    int data ;
-    struct node *next;
-    
-}Node;
-
-
-   Node* ll_prepend(Node *, int );
-   Node* ll_make_node(int);
-   Node* insert_before(Node * , int);
-   Node* insert_After(Node * , int);
-   void display( Node *);
-   Node * find(Node *,int);
-   Node * deleteDesired(Node *,Node *); 
-    Node * insert_AfterHead(Node*,int);
-    Node * reverseDoubly(Node *);
-   
-     void display(Node *head)
-      {
-          Node *ptr=head;
-       while (ptr != NULL)
-       {
-        printf("Element: %d\n", ptr->data);
-        ptr = ptr->next;
-        }
-     }
-        
-   int main()
-   {
-       
-      Node *head;
-      int  Dnum;
-        head=ll_make_node(1);
-        head=ll_prepend(head, 5); 
-        head=insert_before(head, 10);
-        //head=insert_After(head,15);
-        head=insert_AfterHead(head,15);
-        printf("our doubly  linked list is \n");
-        display(head);
-         printf("--------------------------------\n");
-         printf("our doubly linked  from reverse\n");
-          reverseDoubly(head);
-       assert(find(head,11)==NULL);
-       printf("\n------------------------------------\n");
-        printf("\n Enter the number you want to delete?\n");
-        scanf("%d",&Dnum);
-        Node* point=find(head,Dnum);
-        head=deleteDesired(head,point);
-        printf("my linked list after deletion\n");
-        display(head);
-        printf("\n------reverse after deleting-------\n");
-        reverseDoubly(head);
-       return 0;
-   }
-   
-   
-   
+#include "headerf.h"
    
      Node* ll_make_node(int data) {
        Node* node = calloc(1, sizeof(struct node));
@@ -77,6 +17,10 @@ typedef struct node {
       
         Node *newnode;
         newnode=ll_make_node(value);
+
+        if (head==NULL){
+          return newnode;
+        }        
         newnode->prev=NULL;
         newnode->next= head;
         head->prev=newnode;
@@ -193,3 +137,12 @@ typedef struct node {
                     return head;
              
                }
+                void display(Node *head)
+      {
+          Node *ptr=head;
+       while (ptr != NULL)
+       {
+        printf("Element: %d\n", ptr->data);
+        ptr = ptr->next;
+        }
+     }

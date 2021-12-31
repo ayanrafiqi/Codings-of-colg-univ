@@ -6,8 +6,8 @@ typedef struct node {
 }Node;
 
 
-   Node* ll_prepend(Node *, int );
-   Node* ll_make_node(int);
+   Node* dll_prepend(Node *, int );
+   Node* dll_make_node(int);
    Node* insert_before(Node * , int);
    Node* insert_After(Node * , int);
    void display( Node *);

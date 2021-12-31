@@ -1,0 +1,65 @@
+#include <stdio.h>
+int tos = -1;
+void push(int [] , int  );
+void display(int [], int );
+void pop(int []);
+int main()
+{
+    int arr[5];
+    int size;
+    printf("enter the size of an array\n");
+    scanf("%d",&size);
+    for(int i=0 ; i < size ; i++){
+     push(arr, size);
+    }
+    
+    printf("The stack after push operation\n");
+    display(arr ,size);
+    
+    printf("poping two elements from the stack\n");
+    for(int i=0 ; i < 2 ;i++){
+     pop(arr);
+    }
+    printf("display the stack after pop operation\n");
+    display(arr ,size);
+    
+     
+    return 0;
+ }
+   void push(int arr[] , int size ){
+       
+       if(tos == size-1){
+           printf("stack overflowed");
+       }
+       else{
+           tos=tos+1;
+           printf("enter the element in a stack \n");
+           scanf("%d",&arr[tos]);
+       }
+   }
+   
+   
+   void pop(int arr[]){
+       if(tos==-1){
+           printf("empty stack");
+        }
+        else{
+            tos=tos-1;
+            printf("element from the top of the stack is removed\n");
+        }
+   }
+   
+   void display(int arr[],int size){
+     if(tos==-1){
+         printf("empty stack");
+     }
+     else {
+        int j=tos;
+        while(j>=0){
+        printf(" %d\t",arr[j]);
+        j--;
+        }
+          } 
+     
+          }
+   

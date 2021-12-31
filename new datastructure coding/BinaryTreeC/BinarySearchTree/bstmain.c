@@ -13,11 +13,11 @@ int main()
     
 
   int num;
-  printf("enter the number you want to serch\n");
+  printf("enter the number you want to search\n");
   scanf("%d",&num);
 
-   Node * found= bst_search(bst,num);
-        printf(" your data %d is at  position %x", found->data , found);
+   Node * key= bst_search(bst,num);
+  printf(" your data %d is at  position %x", key->data , key);
 
 
    return 0;

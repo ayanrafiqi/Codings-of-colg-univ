@@ -17,15 +17,15 @@ bool linear_search(int a[], int size, int x){
 
 int main(){
   int a[] = {2, 3, 4, 6, 8, 9};
-  int size = sizeof elements / sizeof elements[0];
+  int size = sizeof a / sizeof a[0];
  
 
   if(linear_search(a, size, 6))
-    printf("Element found number %d is present in the array\n", x);
+    printf("Element found number is present in the array");
   else
-    printf("Element not found number %d is not present in the array\n", x);
+    printf("Element not found number %d is not present in the array\n");
 
-  //assert(linear_search(elements, size, 4) == true);
-  //assert(linear_search(elements, size, 1) == false);
+  //assert(linear_search(a, size, 4) == true);
+  //assert(linear_search(a, size, 1) == false);
   return 0;
 }

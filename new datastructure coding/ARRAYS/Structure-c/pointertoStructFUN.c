@@ -10,17 +10,17 @@ int main()
     struct node a;
     a.x=3;
     a.y=2;
-    struct node* k=add(&a);
+    struct node* k = add(&a);
     printf("%d,%d",k->x,k->y);
     return 0;
 }
-    struct node* add(struct node * m){
-       struct node* newnode;
-         newnode = (struct node*)calloc(1,sizeof(struct node));
-       newnode->x=m->x + m->y;
-       newnode->y=m->x * m->y;
+struct node* add(struct node * m){
+struct node* newnode;
+ newnode = (struct node*)calloc(1,sizeof(struct node));
+  newnode->x = m-> x + m->y;
+  newnode->y = m-> x * m->y;
         
-        return newnode;
+  return newnode;
 
 }
 

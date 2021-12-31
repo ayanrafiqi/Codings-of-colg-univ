@@ -3,21 +3,19 @@
 #include "sorting.h"
 
 void insertionSort(int a[],int n){
-  int t;
+
   for(int i=0;i<n;i++)
   {
-    for (int j=n;j>0;j--)
+    for (int j=i;j>0;j--)
     {
       if (a[j]<a[j-1])
       {
-        t = a[j];
-        a[j] = a[j-1];
-        a[j-1] = t;
+       swap(a,j,j-1);
        }
 
     }
   } 
-
+   display(a,n); 
 }
 
 void  display (int a[], int n){
@@ -38,3 +36,11 @@ bool arrayEqual(int a[], int s[], int n){
   }
   return equal;
 }
+
+
+void swap(int a[], int i, int j){
+      int temp=a[i];
+      a[i] = a[j];
+      a[j]=temp;
+
+  }

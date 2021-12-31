@@ -92,7 +92,7 @@
        {
            
           
-          Node * prev=NULL;
+         /* Node * prev=NULL;
            Node * nxt=NULL;
            while(head!=NULL){
                nxt=head->next;
@@ -102,7 +102,7 @@
              }
               head= prev;
                Node *ptr=head;
-            
+           */ 
           while (ptr != NULL)
            {
               printf("Element: %d\n", ptr->data);

@@ -14,9 +14,10 @@
 
  Node* addAtBegin( Node *head, int data)
  {
-  Node*newnode;
-  newnode = ll_make_node(data); 
-  newnode->data = data;
+  Node*newnode= ll_make_node(data); 
+  if(head==NULL){
+    return newnode;
+  }
   newnode->next = head;
   return newnode;
  }

@@ -3,7 +3,7 @@
 #include <assert.h>
 #include "headerf.h"
    
-     Node* ll_make_node(int data) {
+     Node* dll_make_node(int data) {
        Node* node = calloc(1, sizeof(struct node));
         node->prev = NULL;
         node->data = data;
@@ -12,11 +12,11 @@
        return node;
        }
        
-    Node* ll_prepend( Node * head, int value)
+    Node* dll_prepend( Node * head, int value)
      {
       
         Node *newnode;
-        newnode=ll_make_node(value);
+        newnode=dll_make_node(value);
 
         if (head==NULL){
           return newnode;
@@ -30,11 +30,11 @@
       }
       
     Node * insert_before(Node * head, int value){
-                 Node* ptr=head;
-              if(ptr->prev==NULL){
-                  return ll_prepend(ptr,value);
+       Node* ptr=head;
+       if(ptr->prev==NULL){
+         return ll_prepend(ptr,value);
               
-               }
+          }
              }
              
              
@@ -105,7 +105,7 @@
                  Node *q=point->next;
                  
                
-                 if(q==NULL){
+                 if(q==NULL){ //delete at end if it is the last
                       pre->next=point->next;
                        free(point);
                        return head;

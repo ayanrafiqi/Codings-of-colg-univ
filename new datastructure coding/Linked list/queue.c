@@ -6,7 +6,7 @@
 typedef struct node
 {
   int data;
-   struct node *next;
+  struct node *next;
  } Node;
 
 typedef struct queue{
@@ -32,7 +32,7 @@ int main()
    }
    printf("my Linked list after enqueue\n ");    
    display(queue);
-   for(int i = 0 ; i < 2 ; i++){
+  // for(int i = 0 ; i < 2 ; i++){
       dequeue(queue);
     }
    printf("after dequeue\n");
